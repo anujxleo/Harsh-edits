@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, isValidElement, cloneElement } from "react";
 import { Home, User, Briefcase, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +31,11 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
   const renderContent = () => {
     switch (activeTab) {
       case "home":
-        return <div className="pb-24">{hero}</div>;
+        return <div className="pb-24">
+          {isValidElement(hero) ? cloneElement(hero as React.ReactElement<any>, { 
+            onHireMeClick: () => setActiveTab("contact") 
+          }) : hero}
+        </div>;
       case "about":
         return <div className="pb-24 space-y-8">{about}{services}</div>;
       case "work":
