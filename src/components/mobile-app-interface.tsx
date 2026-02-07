@@ -60,7 +60,7 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
           )}
         >
           <Home className="h-6 w-6" />
-          <span className="text-[10px] mt-1 font-medium">Home</span>
+          <span className="text-xs mt-1 font-medium">Home</span>
         </button>
         <button
           onClick={() => setActiveTab("about")}
@@ -70,7 +70,7 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
           )}
         >
           <User className="h-6 w-6" />
-          <span className="text-[10px] mt-1 font-medium">About</span>
+          <span className="text-xs mt-1 font-medium">About</span>
         </button>
         <button
           onClick={() => setActiveTab("work")}
@@ -80,7 +80,7 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
           )}
         >
           <Briefcase className="h-6 w-6" />
-          <span className="text-[10px] mt-1 font-medium">Work</span>
+          <span className="text-xs mt-1 font-medium">Work</span>
         </button>
         <button
           onClick={() => setActiveTab("contact")}
@@ -90,7 +90,7 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
           )}
         >
           <Mail className="h-6 w-6" />
-          <span className="text-[10px] mt-1 font-medium">Contact</span>
+          <span className="text-xs mt-1 font-medium">Contact</span>
         </button>
       </nav>
     </div>

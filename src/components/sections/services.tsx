@@ -28,23 +28,23 @@ const services = [
 export function ServicesSection() {
   return (
     <section id="services" className="py-16 md:py-24 bg-black/20">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-5 sm:px-6">
         <FadeIn>
           <h2 className="section-title">What I Offer</h2>
         </FadeIn>
         
-        <FadeIn className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        <FadeIn className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="glass-card text-center p-6">
-                <CardHeader>
+              <Card key={index} className="glass-card text-center p-6 w-full">
+                <CardHeader className="p-0 mb-4">
                   <div className="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
                 </CardHeader>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-base text-muted-foreground">
                   {service.description}
                 </CardDescription>
               </Card>
