@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { VFXButton } from "@/components/ui/vfx-button";
-import { Instagram, Mail, ArrowRight } from "lucide-react";
+import { Instagram, Mail, ArrowRight, Linkedin } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { FadeIn } from "./fade-in";
 
@@ -67,9 +67,9 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
 
                 {/* CTAs */}
                 <FadeIn delay={0.5} className="w-full space-y-4 max-w-sm mx-auto">
-                    {/* Button Removed as per request */}
+                  {/* Button Removed as per request */}
                     
-                    <div className="grid grid-cols-2 gap-4 w-full px-2">
+                    <div className="flex flex-col gap-4 w-full px-2">
                         <VFXButton asChild className="h-14">
                             <a 
                                 href="#contact"
@@ -88,6 +88,12 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                              <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer">
                                 <Instagram className="mr-2 h-5 w-5" />
                                 <span>Instagram</span>
+                            </a>
+                        </VFXButton>
+                        <VFXButton asChild className="h-14">
+                             <a href="https://www.linkedin.com/in/harsh-kumar-9348672a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                                <Linkedin className="mr-2 h-5 w-5" />
+                                <span>LinkedIn</span>
                             </a>
                         </VFXButton>
                     </div>
