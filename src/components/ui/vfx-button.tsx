@@ -37,25 +37,23 @@ export const VFXButton = React.forwardRef<HTMLButtonElement, VFXButtonProps>(
         }}
         whileTap={{ scale: 0.98 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        className="inline-block w-full"
+        className="inline-block w-full relative group rounded-[18px]"
       >
         <Comp
           className={cn(
             "relative w-full overflow-hidden rounded-[18px] border border-[rgba(255,215,0,0.3)] bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] px-6 py-4 text-center uppercase tracking-widest text-primary transition-all duration-300 hover:text-[#FFD700] hover:border-[#FFD700]",
             "shadow-[0_0_20px_rgba(255,215,0,0.1)] hover:shadow-[0_0_30px_rgba(255,215,0,0.3)]",
-            "flex items-center justify-center font-bold text-sm md:text-base cursor-pointer",
+            "flex items-center justify-center gap-3 font-bold text-sm md:text-base cursor-pointer",
              className
           )}
           ref={ref}
           {...props}
         >
-          {/* Animated Sheen Effect */}
-          <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0 pointer-events-none" />
-          
-          <span className="relative z-10 flex items-center gap-3">
-            {children}
-          </span>
+          {children}
         </Comp>
+        
+        {/* Animated Sheen Effect */}
+        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent z-10 pointer-events-none rounded-[18px]" />
       </motion.div>
     );
   }
