@@ -19,49 +19,54 @@ export function AboutSection() {
           <FadeIn className="space-y-6 md:space-y-8 order-2 md:order-1">
             <div className="text-center md:text-left">
                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Skills</h3>
-                <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-muted-foreground inline-block text-left">
-                    <li>Video Editing (Premiere Pro, After Effects)</li>
-                    <li>Color Grading & Color Correction</li>
-                    <li>Green Screen / Chroma Key</li>
-                    <li>Thumbnail Design (Photoshop)</li>
-                    <li>Teaser & Trailer Editing</li>
-                    <li>Reels, Shorts & YouTube Video Editing</li>
-                </ul>
+                <Card className="glass-card text-left">
+                    <CardContent className="p-4 md:p-6">
+                        <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-muted-foreground">
+                            <li>Video Editing (Premiere Pro, After Effects)</li>
+                            <li>Color Grading & Color Correction</li>
+                            <li>Green Screen / Chroma Key</li>
+                            <li>Thumbnail Design (Photoshop)</li>
+                            <li>Teaser & Trailer Editing</li>
+                            <li>Reels, Shorts & YouTube Video Editing</li>
+                        </ul>
+                    </CardContent>
+                </Card>
             </div>
 
             <div>
                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 text-center md:text-left">Experience</h3>
                 <div className="space-y-4">
                     <Card className="glass-card">
-                        <CardHeader className="p-4 md:p-6">
-                            <CardTitle className="text-lg md:text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
-                                <span>Freelance Gigs</span>
-                                <span className="text-sm text-muted-foreground font-normal">2022 - 2024</span>
-                            </CardTitle>
-                            <p className="text-sm font-medium text-primary">Video Editor</p>
-                        </CardHeader>
-                        <CardContent className="p-4 md:p-6 pt-0 md:pt-0">
-                            <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
-                                <li>Edited fast-paced Instagram Reels & YouTube Shorts</li>
-                                <li>Created Music Videos, Ads, and Promotional Content</li>
-                                <li>Designed clear and engaging Explainer Videos</li>
-                            </ul>
-                        </CardContent>
-                    </Card>
-                    <Card className="glass-card">
-                        <CardHeader className="p-4 md:p-6">
-                            <CardTitle className="text-lg md:text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
-                                <span>Adda247</span>
-                                <span className="text-sm text-muted-foreground font-normal">2024 - Present</span>
-                            </CardTitle>
-                            <p className="text-sm font-medium text-primary">Video Editor and Graphic Designer</p>
-                        </CardHeader>
-                        <CardContent className="p-4 md:p-6 pt-0 md:pt-0">
-                            <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
-                                <li>High-Impact Teasers, Promotional & Advertisement Videos.</li>
-                                <li>Instagram Reels, YouTube Shorts & Music Video Editing.</li>
-                                <li>Explainer Videos & Green Screen Editing.</li>
-                            </ul>
+                         <CardContent className="p-4 md:p-6 space-y-6">
+                            {/* Freelance Gigs */}
+                            <div>
+                                <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between mb-2">
+                                    <h4 className="text-lg md:text-xl font-semibold leading-none tracking-tight">Freelance Gigs</h4>
+                                    <span className="text-sm text-muted-foreground font-normal">2022 - 2024</span>
+                                </div>
+                                <p className="text-sm font-medium text-primary mb-2">Video Editor</p>
+                                <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
+                                    <li>Edited fast-paced Instagram Reels & YouTube Shorts</li>
+                                    <li>Created Music Videos, Ads, and Promotional Content</li>
+                                    <li>Designed clear and engaging Explainer Videos</li>
+                                </ul>
+                            </div>
+
+                            <div className="h-px bg-border/50 w-full" />
+
+                            {/* Adda247 */}
+                            <div>
+                                <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between mb-2">
+                                    <h4 className="text-lg md:text-xl font-semibold leading-none tracking-tight">Adda247</h4>
+                                    <span className="text-sm text-muted-foreground font-normal">2024 - Present</span>
+                                </div>
+                                <p className="text-sm font-medium text-primary mb-2">Video Editor and Graphic Designer</p>
+                                <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
+                                    <li>High-Impact Teasers, Promotional & Advertisement Videos.</li>
+                                    <li>Instagram Reels, YouTube Shorts & Music Video Editing.</li>
+                                    <li>Explainer Videos & Green Screen Editing.</li>
+                                </ul>
+                            </div>
                         </CardContent>
                     </Card>
                 </div>
