@@ -45,13 +45,15 @@ export function PortfolioSection() {
         
         <FadeIn>
           <Tabs defaultValue="reels" className="w-full">
-            <TabsList className="grid w-full h-auto grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-12">
-              <TabsTrigger value="reels">Instagram Reels</TabsTrigger>
-              <TabsTrigger value="cinematic">Cinematic Edits</TabsTrigger>
-              <TabsTrigger value="transitions">Transitions</TabsTrigger>
-              <TabsTrigger value="music">Music Edits</TabsTrigger>
-              <TabsTrigger value="client">Client Work</TabsTrigger>
-            </TabsList>
+            <div className="overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
+              <TabsList className="inline-flex h-auto w-auto min-w-full md:w-full md:grid md:grid-cols-5 p-1 gap-2 bg-muted/50 backdrop-blur-sm rounded-xl">
+                <TabsTrigger value="reels" className="flex-1 whitespace-nowrap px-4 py-2">Instagram Reels</TabsTrigger>
+                <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2">Cinematic Edits</TabsTrigger>
+                <TabsTrigger value="transitions" className="flex-1 whitespace-nowrap px-4 py-2">Transitions</TabsTrigger>
+                <TabsTrigger value="music" className="flex-1 whitespace-nowrap px-4 py-2">Music Edits</TabsTrigger>
+                <TabsTrigger value="client" className="flex-1 whitespace-nowrap px-4 py-2">Client Work</TabsTrigger>
+              </TabsList>
+            </div>
             <TabsContent value="reels"><PortfolioGrid category="reels" /></TabsContent>
             <TabsContent value="cinematic"><PortfolioGrid category="cinematic" /></TabsContent>
             <TabsContent value="transitions"><PortfolioGrid category="transitions" /></TabsContent>
