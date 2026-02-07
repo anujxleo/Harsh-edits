@@ -61,7 +61,7 @@ export function PortfolioSection() {
             <div className="w-full overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0 no-scrollbar">
               <TabsList className="inline-flex h-auto w-auto min-w-full md:w-full md:grid md:grid-cols-5 p-1 gap-2 bg-muted/50 backdrop-blur-sm rounded-xl">
                 <TabsTrigger value="thumbnails" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Thumbnails</TabsTrigger>
-                <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Cinematic Edits</TabsTrigger>
+                <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Short Edits</TabsTrigger>
                 <TabsTrigger value="transitions" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Transitions</TabsTrigger>
                 <TabsTrigger value="music" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Music Edits</TabsTrigger>
                 <TabsTrigger value="client" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Client Work</TabsTrigger>
