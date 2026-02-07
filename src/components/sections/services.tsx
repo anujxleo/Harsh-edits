@@ -33,7 +33,7 @@ export function ServicesSection() {
           <h2 className="section-title">What I Offer</h2>
         </FadeIn>
         
-        <FadeIn className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <FadeIn className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

@@ -15,11 +15,11 @@ export function AboutSection() {
           <h2 className="section-title">About Me</h2>
         </FadeIn>
         
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-          <FadeIn className="space-y-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-16 items-start">
+          <FadeIn className="space-y-4 md:space-y-8">
             <div>
-                <h3 className="text-2xl font-bold text-primary mb-4">Skills</h3>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <h3 className="text-lg md:text-2xl font-bold text-primary mb-2 md:mb-4">Skills</h3>
+                <ul className="list-disc list-inside space-y-1 md:space-y-2 text-xs md:text-base text-muted-foreground">
                     <li>Video Editing (Premiere Pro, After Effects)</li>
                     <li>Color Grading & Color Correction</li>
                     <li>Green Screen / Chroma Key</li>
@@ -30,18 +30,18 @@ export function AboutSection() {
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold text-primary mb-4">Experience</h3>
-                <div className="space-y-6">
+                <h3 className="text-lg md:text-2xl font-bold text-primary mb-2 md:mb-4">Experience</h3>
+                <div className="space-y-4 md:space-y-6">
                     <Card className="glass-card">
-                        <CardHeader>
-                            <CardTitle className="text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
+                        <CardHeader className="p-3 md:p-6">
+                            <CardTitle className="text-sm md:text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
                                 <span>Freelance Gigs</span>
-                                <span className="text-sm text-muted-foreground font-normal">2022 - 2024</span>
+                                <span className="text-xs md:text-sm text-muted-foreground font-normal">2022 - 2024</span>
                             </CardTitle>
-                            <p className="text-sm font-medium text-primary">Video Editor</p>
+                            <p className="text-xs md:text-sm font-medium text-primary">Video Editor</p>
                         </CardHeader>
-                        <CardContent>
-                            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <CardContent className="p-3 md:p-6 pt-0 md:pt-0">
+                            <ul className="list-disc list-inside text-xs md:text-base text-muted-foreground space-y-1">
                                 <li>Edited fast-paced Instagram Reels & YouTube Shorts</li>
                                 <li>Created Music Videos, Ads, and Promotional Content</li>
                                 <li>Designed clear and engaging Explainer Videos</li>
@@ -49,15 +49,15 @@ export function AboutSection() {
                         </CardContent>
                     </Card>
                     <Card className="glass-card">
-                        <CardHeader>
-                            <CardTitle className="text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
+                        <CardHeader className="p-3 md:p-6">
+                            <CardTitle className="text-sm md:text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
                                 <span>Adda247</span>
-                                <span className="text-sm text-muted-foreground font-normal">2024 - Present</span>
+                                <span className="text-xs md:text-sm text-muted-foreground font-normal">2024 - Present</span>
                             </CardTitle>
-                            <p className="text-sm font-medium text-primary">Video Editor and Graphic Designer</p>
+                            <p className="text-xs md:text-sm font-medium text-primary">Video Editor and Graphic Designer</p>
                         </CardHeader>
-                        <CardContent>
-                            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <CardContent className="p-3 md:p-6 pt-0 md:pt-0">
+                            <ul className="list-disc list-inside text-xs md:text-base text-muted-foreground space-y-1">
                                 <li>High-Impact Teasers, Promotional & Advertisement Videos.</li>
                                 <li>Instagram Reels, YouTube Shorts & Music Video Editing.</li>
                                 <li>Explainer Videos & Green Screen Editing.</li>
@@ -67,9 +67,9 @@ export function AboutSection() {
                 </div>
             </div>
 
-            <Button className="mt-4 liquid-btn glow-on-hover w-full sm:w-auto" size="lg" asChild>
+            <Button className="mt-4 liquid-btn glow-on-hover w-full sm:w-auto text-xs md:text-base" size="lg" asChild>
               <a href="https://drive.google.com/file/d/1Khla8T6dwa-vGtPin6fzpu1DlGX1C44E/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2" />
+                <Download className="mr-2 h-4 w-4" />
                 <span>Download Resume</span>
               </a>
             </Button>

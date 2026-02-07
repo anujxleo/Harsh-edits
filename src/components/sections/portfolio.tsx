@@ -16,7 +16,7 @@ const portfolioItems = {
 };
 
 const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
     {portfolioItems[category].map((item) => (
       <div key={item.id} className="group relative overflow-hidden rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/20">
         <Image
