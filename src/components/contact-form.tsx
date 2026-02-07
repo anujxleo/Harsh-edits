@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -72,6 +72,11 @@ export function ContactForm() {
                 <Button variant="ghost" size="icon" asChild>
                     <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <Instagram />
+                    </a>
+                </Button>
+                <Button variant="ghost" size="icon" asChild>
+                    <a href="mailto:hkharsh584@gmail.com" aria-label="Email">
+                        <Mail />
                     </a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
