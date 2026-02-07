@@ -6,6 +6,7 @@ import { ContactSection } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
 
 import { MobileAppInterface } from "@/components/mobile-app-interface";
+import { MobileHome } from "@/components/mobile-home";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 
       {/* Mobile Layout - App Interface */}
       <MobileAppInterface 
-        hero={<HeroSection />}
+        hero={<MobileHome />}
         about={<AboutSection />}
         portfolio={<PortfolioSection />}
         services={<ServicesSection />}
