@@ -28,9 +28,27 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 async function handleSubmit(data: z.infer<typeof formSchema>) {
-  console.log("Form submitted:", data);
-  // Here you would typically send the data to your backend or a service like EmailJS
-  return { success: true, message: "Your message has been sent!" };
+  try {
+      const response = await fetch("https://formsubmit.co/ajax/hhk175560@gmail.com", {
+          method: "POST",
+          headers: { 
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+          },
+          body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+           return { success: true, message: "Your message has been sent successfully!" };
+      } else {
+           return { success: false, message: result.message || "Something went wrong." };
+      }
+  } catch (error) {
+      console.error("Form error:", error);
+      return { success: false, message: "Failed to send message. Please try again later." };
+  }
 }
 
 export function ContactForm() {

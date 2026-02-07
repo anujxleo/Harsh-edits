@@ -33,7 +33,7 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                                     src={heroImage.imageUrl}
                                     alt="Harsh - Professional Editor"
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover object-center"
                                     priority
                                     data-ai-hint={heroImage.imageHint}
                                 />
