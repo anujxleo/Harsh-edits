@@ -18,7 +18,7 @@ export function HeroSection() {
                             <span className="block text-primary">Professional Video Editor</span>
                         </h1>
                         <p className="mt-4 text-xl text-muted-foreground">
-                            Crafting Cinematic Stories Through Visual Excellence
+                            Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations
                         </p>
                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                             <Button asChild className="liquid-btn glow-on-hover" size="lg">

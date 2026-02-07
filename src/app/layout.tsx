@@ -5,7 +5,7 @@ import { LoadingScreen } from '@/components/loading-screen';
 
 export const metadata: Metadata = {
   title: 'Harsh – Professional Video Editor',
-  description: 'Crafting Cinematic Stories Through Visual Excellence',
+  description: 'Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations',
 };
 
 export default function RootLayout({
