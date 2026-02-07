@@ -22,9 +22,6 @@ export function HeroSection() {
                             Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations
                         </p>
                         <div className="mt-4 md:mt-8 flex flex-row gap-2 md:gap-4 justify-center md:justify-start">
-                            {/* <Button asChild className="liquid-btn glow-on-hover w-auto px-4 py-2 h-auto text-xs md:text-base hidden md:inline-flex" size="lg">
-                                <a href="#portfolio"><span>View My Work</span></a>
-                            </Button> */}
                             <Button asChild variant="outline" className="liquid-btn w-auto px-4 py-2 h-auto text-xs md:text-base" size="lg">
                                 <a href="#contact"><span>Hire Me</span></a>
                             </Button>
@@ -39,13 +36,13 @@ export function HeroSection() {
                     </FadeIn>
                     <FadeIn className="flex justify-center items-center order-1 md:order-2">
                          {heroImage && (
-                            <div className="golden-frame transform transition-transform duration-500 hover:scale-105 w-48 h-48 md:w-auto md:h-auto rounded-full md:rounded-lg overflow-hidden mx-auto">
+                            <div className="golden-frame transform transition-transform duration-500 hover:scale-105 w-56 h-56 md:w-auto md:h-auto !rounded-full md:!rounded-2xl overflow-hidden mx-auto">
                                  <Image
                                     src={heroImage.imageUrl}
                                     alt={heroImage.description}
                                     width={400}
                                     height={500}
-                                    className="rounded-full md:rounded-lg object-cover w-full h-full"
+                                    className="!rounded-full md:!rounded-2xl object-cover w-full h-full"
                                     priority
                                     data-ai-hint={heroImage.imageHint}
                                 />
