@@ -33,10 +33,10 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
   
   return (
     <div className={cn(
-      "grid gap-6 md:gap-8",
+      "grid gap-4 md:gap-8", // Reduced gap on mobile
       isVertical 
         ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" 
-        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" // Changed mobile to grid-cols-2 for all
     )}>
       {portfolioItems[category].map((item) => {
         const isVideo = item.imageUrl.endsWith('.mp4');
@@ -84,26 +84,86 @@ export function PortfolioSection() {
           <h2 className="section-title">My Edits</h2>
         </FadeIn>
         
-        <FadeIn>
-          <Tabs defaultValue="thumbnails" className="w-full">
-            <div className="w-full overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0 no-scrollbar">
-              <TabsList className="inline-flex h-auto w-auto min-w-full md:w-full md:grid md:grid-cols-5 p-1 gap-2 bg-muted/50 backdrop-blur-sm rounded-xl">
-                <TabsTrigger value="thumbnails" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Thumbnails</TabsTrigger>
-                <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Short Edits</TabsTrigger>
-                <TabsTrigger value="transitions" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Transitions</TabsTrigger>
-                <TabsTrigger value="music" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Music Edits</TabsTrigger>
-                <TabsTrigger value="client" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Client Work</TabsTrigger>
-              </TabsList>
-            </div>
-            <div className="mt-6 md:mt-8">
-                <TabsContent value="thumbnails"><PortfolioGrid category="thumbnails" /></TabsContent>
-                <TabsContent value="cinematic"><PortfolioGrid category="cinematic" /></TabsContent>
-                <TabsContent value="transitions"><PortfolioGrid category="transitions" /></TabsContent>
-                <TabsContent value="music"><PortfolioGrid category="music" /></TabsContent>
-                <TabsContent value="client"><PortfolioGrid category="client" /></TabsContent>
-            </div>
-          </Tabs>
-        </FadeIn>
+        <div className="hidden md:block">
+          <FadeIn>
+            <Tabs defaultValue="thumbnails" className="w-full">
+              <div className="w-full overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0 no-scrollbar">
+                <TabsList className="inline-flex h-auto w-auto min-w-full md:w-full md:grid md:grid-cols-5 p-1 gap-2 bg-muted/50 backdrop-blur-sm rounded-xl">
+                  <TabsTrigger value="thumbnails" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Thumbnails</TabsTrigger>
+                  <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Short Edits</TabsTrigger>
+                  <TabsTrigger value="transitions" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Transitions</TabsTrigger>
+                  <TabsTrigger value="music" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Music Edits</TabsTrigger>
+                  <TabsTrigger value="client" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Client Work</TabsTrigger>
+                </TabsList>
+              </div>
+              <div className="mt-6 md:mt-8">
+                  <TabsContent value="thumbnails"><PortfolioGrid category="thumbnails" /></TabsContent>
+                  <TabsContent value="cinematic"><PortfolioGrid category="cinematic" /></TabsContent>
+                  <TabsContent value="transitions"><PortfolioGrid category="transitions" /></TabsContent>
+                  <TabsContent value="music"><PortfolioGrid category="music" /></TabsContent>
+                  <TabsContent value="client"><PortfolioGrid category="client" /></TabsContent>
+              </div>
+            </Tabs>
+          </FadeIn>
+        </div>
+
+        {/* Mobile View - Vertical Stack */}
+        <div className="md:hidden space-y-16">
+            {/* Short Edits */}
+            <FadeIn>
+                <div className="space-y-6">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Short Edits</h3>
+                        <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    </div>
+                    <PortfolioGrid category="cinematic" />
+                </div>
+            </FadeIn>
+
+            {/* Thumbnails */}
+            <FadeIn>
+                <div className="space-y-6">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Thumbnails</h3>
+                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    </div>
+                    <PortfolioGrid category="thumbnails" />
+                </div>
+            </FadeIn>
+
+            {/* Transitions */}
+             <FadeIn>
+                <div className="space-y-6">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Transitions</h3>
+                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    </div>
+                    <PortfolioGrid category="transitions" />
+                </div>
+            </FadeIn>
+
+             {/* Music Edits */}
+             <FadeIn>
+                <div className="space-y-6">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Music Edits</h3>
+                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    </div>
+                    <PortfolioGrid category="music" />
+                </div>
+            </FadeIn>
+
+             {/* Client Work */}
+             <FadeIn>
+                <div className="space-y-6">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Client Work</h3>
+                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    </div>
+                    <PortfolioGrid category="client" />
+                </div>
+            </FadeIn>
+        </div>
 
         <FadeIn className="text-center mt-12">
             <Button asChild size="lg" className="liquid-btn glow-on-hover w-full sm:w-auto h-12 text-sm uppercase tracking-wide font-medium">
