@@ -68,7 +68,7 @@ export function AboutSection() {
             </div>
 
             <Button className="mt-4 liquid-btn glow-on-hover" size="lg" asChild>
-              <a href="#" download>
+              <a href="https://drive.google.com/file/d/1Khla8T6dwa-vGtPin6fzpu1DlGX1C44E/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2" />
                 <span>Download Resume</span>
               </a>
