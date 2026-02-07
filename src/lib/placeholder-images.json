@@ -1,3 +1,112 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "harsh-professional-hero",
+      "description": "Professional portrait of Harsh for the hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA0MTQyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "harsh-professional-about",
+      "description": "Professional image of Harsh for the about section",
+      "imageUrl": "https://images.unsplash.com/photo-1666778845215-2ed716b5ce73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBzdHVkaW98ZW58MHx8fHwxNzcwNDQ5MTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man studio"
+    },
+    {
+      "id": "reel-1",
+      "description": "Instagram Reel thumbnail 1",
+      "imageUrl": "https://images.unsplash.com/photo-1637664067012-241eb64b7675?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjB2aWRlb3xlbnwwfHx8fDE3NzAzNTAzNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract video"
+    },
+    {
+      "id": "reel-2",
+      "description": "Instagram Reel thumbnail 2",
+      "imageUrl": "https://images.unsplash.com/photo-1704827466488-7933d65e8044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx2aWJyYW50JTIwY29sb3JzfGVufDB8fHx8MTc3MDM5NDI0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vibrant colors"
+    },
+    {
+      "id": "cinematic-1",
+      "description": "Cinematic edit thumbnail 1",
+      "imageUrl": "https://images.unsplash.com/photo-1644822006318-1e520a9b0c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaW5lbWF0aWMlMjBmaWxtfGVufDB8fHx8MTc3MDQwNTk4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cinematic film"
+    },
+    {
+      "id": "cinematic-2",
+      "description": "Cinematic edit thumbnail 2",
+      "imageUrl": "https://images.unsplash.com/photo-1652780241487-f396513216ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb29keSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NzA0NDkxMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "moody landscape"
+    },
+    {
+      "id": "transitions-1",
+      "description": "Transitions video thumbnail 1",
+      "imageUrl": "https://images.unsplash.com/photo-1622036900222-52acc29bc2c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb3Rpb24lMjBibHVyfGVufDB8fHx8MTc3MDQ0OTExNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motion blur"
+    },
+    {
+      "id": "music-1",
+      "description": "Music video edit thumbnail 1",
+      "imageUrl": "https://images.unsplash.com/photo-1643335622021-6fe038ccf08b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb25jZXJ0JTIwbGlnaHRzfGVufDB8fHx8MTc3MDQyNjQ3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "concert lights"
+    },
+    {
+      "id": "client-work-1",
+      "description": "Client work thumbnail 1",
+      "imageUrl": "https://images.unsplash.com/photo-1654723011688-81cfe9039446?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3Jwb3JhdGUlMjB2aWRlb3xlbnwwfHx8fDE3NzAzOTA5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate video"
+    },
+    {
+      "id": "instagram-1",
+      "description": "Instagram post 1",
+      "imageUrl": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c29jaWFsJTIwbWVkaWF8ZW58MHx8fHwxNzcwMzk5MjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social media"
+    },
+    {
+      "id": "instagram-2",
+      "description": "Instagram post 2",
+      "imageUrl": "https://images.unsplash.com/photo-1600096200983-cde7f95fe628?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1cmJhbiUyMHBob3RvZ3JhcGh5fGVufDB8fHx8MTc3MDQ0OTExNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban photography"
+    },
+    {
+      "id": "instagram-3",
+      "description": "Instagram post 3",
+      "imageUrl": "https://images.unsplash.com/photo-1615396899839-c99c121888b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvdHxlbnwwfHx8fDE3NzA0MTIxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "product shot"
+    },
+    {
+      "id": "instagram-4",
+      "description": "Instagram post 4",
+      "imageUrl": "https://images.unsplash.com/photo-1646089410454-9a91deb67606?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsaWZlc3R5bGUlMjBibG9nZ2VyfGVufDB8fHx8MTc3MDQ0OTExNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lifestyle blogger"
+    },
+    {
+      "id": "instagram-5",
+      "description": "Instagram post 5",
+      "imageUrl": "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb29kJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzcwNDM0MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food photography"
+    },
+    {
+      "id": "instagram-6",
+      "description": "Instagram post 6",
+      "imageUrl": "https://images.unsplash.com/photo-1750644327996-53b10ca2776d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0cmF2ZWwlMjBwaG90b3xlbnwwfHx8fDE3NzA0NDkxMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel photo"
+    },
+    {
+      "id": "testimonial-client-1",
+      "description": "Client 1 photo",
+      "imageUrl": "https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc3MDMzNzQ5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-client-2",
+      "description": "Client 2 photo",
+      "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDQwMjYzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-client-3",
+      "description": "Client 3 photo",
+      "imageUrl": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcwNDQ5MTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man professional"
+    }
+  ]
 }
