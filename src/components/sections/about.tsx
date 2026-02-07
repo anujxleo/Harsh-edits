@@ -35,36 +35,42 @@ export function AboutSection() {
             <div>
                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 text-center md:text-left">Experience</h3>
                 <div className="space-y-4">
-                     <VFXCard className="p-6 space-y-6">
+                     <VFXCard className="p-0">
+                        <div className="relative z-20 p-6 space-y-6 bg-black/20 backdrop-blur-sm rounded-[18px]">
                             {/* Freelance Gigs */}
                             <div>
-                                <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between mb-2">
-                                    <h4 className="text-lg md:text-xl font-semibold leading-none tracking-tight">Freelance Gigs</h4>
-                                    <span className="text-sm text-muted-foreground font-normal">2022 - 2024</span>
+                                <div className="flex flex-col items-start gap-1 mb-2">
+                                    <div className="flex items-center justify-between w-full">
+                                        <h4 className="text-xl font-bold text-primary tracking-tight">Freelance Gigs</h4>
+                                        <span className="text-xs text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2022 - 2024</span>
+                                    </div>
+                                    <p className="text-sm font-medium text-white/90">Video Editor</p>
                                 </div>
-                                <p className="text-sm font-medium text-primary mb-2">Video Editor</p>
-                                <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
+                                <ul className="list-disc list-inside text-sm text-muted-foreground/90 space-y-2 ml-1">
                                     <li>Edited fast-paced Instagram Reels & YouTube Shorts</li>
                                     <li>Created Music Videos, Ads, and Promotional Content</li>
                                     <li>Designed clear and engaging Explainer Videos</li>
                                 </ul>
                             </div>
 
-                            <div className="h-px bg-border/50 w-full" />
+                            <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent w-full" />
 
                             {/* Adda247 */}
                             <div>
-                                <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between mb-2">
-                                    <h4 className="text-lg md:text-xl font-semibold leading-none tracking-tight">Adda247</h4>
-                                    <span className="text-sm text-muted-foreground font-normal">2024 - Present</span>
+                                <div className="flex flex-col items-start gap-1 mb-2">
+                                    <div className="flex items-center justify-between w-full">
+                                        <h4 className="text-xl font-bold text-primary tracking-tight">Adda247</h4>
+                                        <span className="text-xs text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2024 - Present</span>
+                                    </div>
+                                    <p className="text-sm font-medium text-white/90">Video Editor and Graphic Designer</p>
                                 </div>
-                                <p className="text-sm font-medium text-primary mb-2">Video Editor and Graphic Designer</p>
-                                <ul className="list-disc list-inside text-sm md:text-base text-muted-foreground space-y-1">
+                                <ul className="list-disc list-inside text-sm text-muted-foreground/90 space-y-2 ml-1">
                                     <li>High-Impact Teasers, Promotional & Advertisement Videos.</li>
                                     <li>Instagram Reels, YouTube Shorts & Music Video Editing.</li>
                                     <li>Explainer Videos & Green Screen Editing.</li>
                                 </ul>
                             </div>
+                        </div>
                     </VFXCard>
                 </div>
             </div>
