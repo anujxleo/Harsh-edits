@@ -28,7 +28,7 @@ export function MobileHome() {
                                     src={heroImage.imageUrl}
                                     alt="Harsh - Professional Editor"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-top"
                                     priority
                                     data-ai-hint={heroImage.imageHint}
                                 />
