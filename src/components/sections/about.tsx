@@ -72,16 +72,16 @@ export function AboutSection() {
                 </div>
             </div>
 
-            <Button className="mt-4 liquid-btn glow-on-hover w-full sm:w-auto h-12 text-sm uppercase tracking-wide font-medium" size="lg" asChild>
+            {/* <Button className="mt-4 liquid-btn glow-on-hover w-full sm:w-auto h-12 text-sm uppercase tracking-wide font-medium" size="lg" asChild>
               <a href="https://drive.google.com/file/d/1Khla8T6dwa-vGtPin6fzpu1DlGX1C44E/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
                 <span>Download Resume</span>
               </a>
-            </Button>
+            </Button> */}
           </FadeIn>
           
           <FadeIn className="flex justify-center items-center order-1 md:order-2 mb-4 md:mb-0">
-            <div className="golden-frame w-full max-w-[280px] md:max-w-md aspect-[4/7] !p-1">
+            <Card className="glass-card w-full max-w-[280px] md:max-w-md aspect-[4/7] !p-1 overflow-hidden">
                 <Image
                   src="https://res.cloudinary.com/dz5aiigdm/image/upload/v1770480844/IMG_20260122_173108.jpg_i6nbyr.jpg"
                   alt="Harsh - Video Editor"
@@ -89,7 +89,7 @@ export function AboutSection() {
                   height={1792}
                   className="rounded-lg object-cover w-full h-full"
                 />
-            </div>
+            </Card>
           </FadeIn>
         </div>
       </div>

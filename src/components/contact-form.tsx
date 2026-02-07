@@ -82,12 +82,7 @@ export function ContactForm() {
                     <Phone className="h-5 w-5 text-primary" />
                     <a href="tel:+916307806757" className="text-muted-foreground hover:text-primary transition-colors">+91 6307806757</a>
                 </div>
-                <div className="flex items-start space-x-4">
-                    <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground break-words">
-                        House no 214, Street no 4, om Vihar phase 1, opposite sector 23A, Gurgaon, 122017
-                    </p>
-                </div>
+                {/* Address Removed */}
             </div>
             <div className="flex items-center space-x-4 pt-4">
                 <Button variant="ghost" size="icon" asChild>
