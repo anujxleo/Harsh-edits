@@ -12,8 +12,8 @@ export function HeroSection() {
              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background z-10"></div>
              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10"></div>
             <div className="container mx-auto px-2 sm:px-6 relative z-20">
-                <div className="grid grid-cols-2 gap-4 md:gap-16 items-center">
-                    <FadeIn as="div" className="text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <FadeIn as="div" className="text-left order-2 md:order-1">
                         <h1 className="text-2xl sm:text-5xl md:text-7xl font-black tracking-tight uppercase leading-tight md:leading-none">
                             Harsh
                             <span className="block text-primary mt-1 md:mt-0">Professional Video Editor</span>
@@ -37,15 +37,15 @@ export function HeroSection() {
                             </Button>
                         </div>
                     </FadeIn>
-                    <FadeIn className="flex justify-center items-center">
+                    <FadeIn className="flex justify-center items-center order-1 md:order-2">
                          {heroImage && (
-                            <div className="golden-frame transform transition-transform duration-500 hover:scale-105">
+                            <div className="golden-frame transform transition-transform duration-500 hover:scale-105 w-48 h-48 md:w-auto md:h-auto rounded-full md:rounded-lg overflow-hidden mx-auto">
                                  <Image
                                     src={heroImage.imageUrl}
                                     alt={heroImage.description}
                                     width={400}
                                     height={500}
-                                    className="rounded-lg object-cover"
+                                    className="rounded-full md:rounded-lg object-cover w-full h-full"
                                     priority
                                     data-ai-hint={heroImage.imageHint}
                                 />
