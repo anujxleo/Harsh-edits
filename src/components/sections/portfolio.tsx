@@ -28,23 +28,37 @@ const portfolioItems = {
 
 const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-    {portfolioItems[category].map((item) => (
-      <div key={item.id} className="group relative overflow-hidden rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/20 aspect-video">
-        <Image
-          src={item.imageUrl}
-          alt={item.description}
-          fill
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-          data-ai-hint={item.imageHint}
-        />
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center gap-4">
-          <Play className="h-12 w-12 md:h-16 md:w-16 text-white/80 transform scale-0 group-hover:scale-100 transition-transform duration-300" />
-          <span className="text-white font-bold text-base md:text-lg border-2 border-primary px-4 py-1 rounded-full bg-black/50 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            View Project
-          </span>
+    {portfolioItems[category].map((item) => {
+      const isVideo = item.imageUrl.endsWith('.mp4');
+      return (
+        <div key={item.id} className="group relative overflow-hidden rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/20 aspect-video">
+          {isVideo ? (
+            <video
+              src={item.imageUrl}
+              className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              muted
+              loop
+              playsInline
+              autoPlay
+            />
+          ) : (
+            <Image
+              src={item.imageUrl}
+              alt={item.description}
+              fill
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              data-ai-hint={item.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center gap-4">
+            <Play className="h-12 w-12 md:h-16 md:w-16 text-white/80 transform scale-0 group-hover:scale-100 transition-transform duration-300" />
+            <span className="text-white font-bold text-base md:text-lg border-2 border-primary px-4 py-1 rounded-full bg-black/50 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              View Project
+            </span>
+          </div>
         </div>
-      </div>
-    ))}
+      );
+    })}
   </div>
 );
 
