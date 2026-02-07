@@ -37,7 +37,7 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
           data-ai-hint={item.imageHint}
         />
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4">
+        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center gap-4">
           <Play className="h-12 w-12 md:h-16 md:w-16 text-white/80 transform scale-0 group-hover:scale-100 transition-transform duration-300" />
           <span className="text-white font-bold text-base md:text-lg border-2 border-primary px-4 py-1 rounded-full bg-black/50 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
             View Project
