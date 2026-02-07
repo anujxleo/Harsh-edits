@@ -22,7 +22,7 @@ export function HeroSection() {
                             Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations
                         </p>
                         <div className="mt-4 md:mt-8 flex flex-row gap-2 md:gap-4 justify-start">
-                            <Button asChild className="liquid-btn glow-on-hover w-auto px-4 py-2 h-auto text-xs md:text-base" size="lg">
+                            <Button asChild className="liquid-btn glow-on-hover w-auto px-4 py-2 h-auto text-xs md:text-base hidden md:inline-flex" size="lg">
                                 <a href="#portfolio"><span>View My Work</span></a>
                             </Button>
                             <Button asChild variant="outline" className="liquid-btn w-auto px-4 py-2 h-auto text-xs md:text-base" size="lg">
