@@ -52,10 +52,10 @@ export function MobileHome() {
                     </h1>
                     <div className="h-px w-12 bg-primary/50 mx-auto"></div>
                      <h2 className="text-lg font-medium text-primary tracking-widest uppercase">
-                        Visual Storyteller
+                        Video Editor
                     </h2>
                     <p className="text-sm text-muted-foreground/80 leading-relaxed max-w-[280px] mx-auto">
-                        Crafting high-end cinematic visuals that captivate and convert. 
+                        Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations 
                     </p>
                 </FadeIn>
 

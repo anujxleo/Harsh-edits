@@ -6,38 +6,46 @@ import { cn } from '@/lib/utils';
 type FadeInProps = {
   children: React.ReactNode;
   className?: string;
+  delay?: number;
   as?: React.ElementType;
 };
 
-export function FadeIn({ children, className, as: Component = 'div' }: FadeInProps) {
-  const ref = useRef<HTMLElement>(null);
+export function FadeIn({ children, className, delay = 0, as: Component = 'div' }: FadeInProps) {
+  const ref = useRef<any>(null);
 
   useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+            // Add a small initial delay before starting animation logic if needed,
+            // or rely on transition-delay style below.
+            // But modifying classes immediately might start transition.
+            // With transition-delay, it should wait.
+            
+          element.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
+          // We don't necessarily need 'is-visible' if we just remove the hiding classes, 
+          // assuming default is visible. But keeping previous logic for safety.
+          element.classList.add('is-visible'); 
+          observer.unobserve(element);
         }
       },
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(element);
     };
   }, []);
 
   return (
     <Component
       ref={ref}
+      style={{ transitionDelay: `${delay}s` }}
       className={cn('opacity-0 translate-y-8 scale-95 transition-all duration-700 ease-out', className)}
     >
       {children}
