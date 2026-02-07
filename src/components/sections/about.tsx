@@ -76,12 +76,12 @@ export function AboutSection() {
           </FadeIn>
           
           <FadeIn className="flex justify-center items-center order-1 md:order-2 mb-4 md:mb-0">
-            <div className="golden-frame w-full max-w-[280px] md:max-w-md aspect-square !p-1">
+            <div className="golden-frame w-full max-w-[280px] md:max-w-md aspect-[4/7] !p-1">
                 <Image
                   src="https://res.cloudinary.com/dz5aiigdm/image/upload/v1770475397/file_0000000034f072098cce16384c7e2188_et4ibz.png"
                   alt="Harsh - Video Editor"
-                  width={400}
-                  height={400}
+                  width={1024}
+                  height={1792}
                   className="rounded-lg object-cover w-full h-full"
                 />
             </div>
