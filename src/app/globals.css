@@ -90,6 +90,18 @@
   }
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer components {
   .section-title {
     @apply text-4xl font-bold font-headline text-center mb-16 relative capitalize;
@@ -123,6 +135,8 @@
 
   .golden-frame {
     @apply p-1.5 bg-gradient-to-br from-primary via-accent to-primary rounded-xl shadow-lg;
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
   }
 
   .glass-card {
