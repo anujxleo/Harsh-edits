@@ -37,15 +37,15 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
 
 export function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="portfolio" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <FadeIn>
           <h2 className="section-title">My Edits</h2>
         </FadeIn>
         
         <FadeIn>
           <Tabs defaultValue="reels" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-12">
+            <TabsList className="grid w-full h-auto grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-12">
               <TabsTrigger value="reels">Instagram Reels</TabsTrigger>
               <TabsTrigger value="cinematic">Cinematic Edits</TabsTrigger>
               <TabsTrigger value="transitions">Transitions</TabsTrigger>

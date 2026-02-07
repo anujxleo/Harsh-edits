@@ -9,13 +9,13 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-about');
 
   return (
-    <section id="about" className="py-20 md:py-32">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <FadeIn>
           <h2 className="section-title">About Me</h2>
         </FadeIn>
         
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <FadeIn className="space-y-8">
             <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Skills</h3>
@@ -34,7 +34,7 @@ export function AboutSection() {
                 <div className="space-y-6">
                     <Card className="glass-card">
                         <CardHeader>
-                            <CardTitle className="text-xl flex justify-between items-center">
+                            <CardTitle className="text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
                                 <span>Freelance Gigs</span>
                                 <span className="text-sm text-muted-foreground font-normal">2022 - 2024</span>
                             </CardTitle>
@@ -50,7 +50,7 @@ export function AboutSection() {
                     </Card>
                     <Card className="glass-card">
                         <CardHeader>
-                            <CardTitle className="text-xl flex justify-between items-center">
+                            <CardTitle className="text-xl flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between">
                                 <span>Adda247</span>
                                 <span className="text-sm text-muted-foreground font-normal">2024 - Present</span>
                             </CardTitle>

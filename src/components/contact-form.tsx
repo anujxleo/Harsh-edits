@@ -62,7 +62,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-16 items-start">
+    <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         <div className="space-y-6">
             <h3 className="text-3xl font-bold">Get in Touch</h3>
             <p className="text-muted-foreground">
@@ -71,7 +71,7 @@ export function ContactForm() {
             <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                     <Mail className="h-5 w-5 text-primary" />
-                    <a href="mailto:hhk175560@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">hhk175560@gmail.com</a>
+                    <a href="mailto:hhk175560@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">hhk175560@gmail.com</a>
                 </div>
                 <div className="flex items-center space-x-4">
                     <Phone className="h-5 w-5 text-primary" />
@@ -79,7 +79,7 @@ export function ContactForm() {
                 </div>
                 <div className="flex items-start space-x-4">
                     <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground break-words">
                         House no 214, Street no 4, om Vihar phase 1, opposite sector 23A, Gurgaon, 122017
                     </p>
                 </div>

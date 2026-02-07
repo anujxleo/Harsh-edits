@@ -8,11 +8,11 @@ export function HeroSection() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-hero');
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center relative py-20">
+        <section id="home" className="min-h-[90vh] md:min-h-screen flex items-center justify-center relative pt-24 pb-12 md:py-20">
              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background z-10"></div>
              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10"></div>
-            <div className="container mx-auto px-6 relative z-20">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="container mx-auto px-4 sm:px-6 relative z-20">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <FadeIn as="div" className="text-center md:text-left">
                         <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
                             Harsh

@@ -8,8 +8,8 @@ export function InstagramSection() {
   const instaPosts = PlaceHolderImages.filter(p => p.id.startsWith('instagram-')).slice(0, 6);
 
   return (
-    <section id="instagram" className="py-20 md:py-32">
-      <div className="container mx-auto px-6">
+    <section id="instagram" className="py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <FadeIn>
           <h2 className="section-title">Latest Instagram Edits</h2>
         </FadeIn>

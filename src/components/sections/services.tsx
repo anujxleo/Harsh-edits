@@ -27,8 +27,8 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20 md:py-32 bg-black/20">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-16 md:py-24 bg-black/20">
+      <div className="container mx-auto px-4 sm:px-6">
         <FadeIn>
           <h2 className="section-title">What I Offer</h2>
         </FadeIn>
