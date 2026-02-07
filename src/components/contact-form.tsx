@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -68,19 +68,30 @@ export function ContactForm() {
             <p className="text-muted-foreground">
                 Have a project in mind or just want to say hello? Fill out the form and I'll get back to you as soon as possible.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                    <Mail className="h-5 w-5 text-primary" />
+                    <a href="mailto:hhk175560@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">hhk175560@gmail.com</a>
+                </div>
+                <div className="flex items-center space-x-4">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <a href="tel:+916307806757" className="text-muted-foreground hover:text-primary transition-colors">+91 6307806757</a>
+                </div>
+                <div className="flex items-start space-x-4">
+                    <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <p className="text-muted-foreground">
+                        House no 214, Street no 4, om Vihar phase 1, opposite sector 23A, Gurgaon, 122017
+                    </p>
+                </div>
+            </div>
+            <div className="flex items-center space-x-4 pt-4">
                 <Button variant="ghost" size="icon" asChild>
                     <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <Instagram />
                     </a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
-                    <a href="mailto:hkharsh584@gmail.com" aria-label="Email">
-                        <Mail />
-                    </a>
-                </Button>
-                <Button variant="ghost" size="icon" asChild>
-                    <a href="#" aria-label="WhatsApp">
+                    <a href="https://wa.me/916307806757" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <WhatsAppIcon />
                     </a>
                 </Button>
