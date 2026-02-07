@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { VFXButton } from "@/components/ui/vfx-button";
 import { Instagram, Mail, ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { FadeIn } from "./fade-in";
@@ -15,9 +16,9 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
     const heroImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-hero');
 
     return (
-        <section className="min-h-[85vh] flex flex-col items-center justify-center relative px-5 py-12 overflow-hidden">
+        <section className="min-h-[85vh] flex flex-col items-center justify-center relative px-5 py-12 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.08),transparent_60%)]">
              {/* Dynamic Background */}
-             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0"></div>
+             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0 pointer-events-none"></div>
              <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse"></div>
              <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] animate-pulse delay-1000"></div>
 
@@ -68,8 +69,8 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                 <FadeIn delay={0.5} className="w-full space-y-4 max-w-sm mx-auto">
                     {/* Button Removed as per request */}
                     
-                    <div className="grid grid-cols-2 gap-3">
-                        <Button asChild variant="outline" className="w-full border-primary/20 hover:bg-primary/10 h-12 text-sm uppercase tracking-wider font-medium" size="sm">
+                    <div className="grid grid-cols-2 gap-4 w-full px-2">
+                        <VFXButton asChild className="h-14">
                             <a 
                                 href="#contact"
                                 onClick={(e) => {
@@ -79,16 +80,16 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                                     }
                                 }}
                             >
-                                <Mail className="mr-2 h-4 w-4" />
-                                Hire Me
+                                <Mail className="mr-2 h-5 w-5" />
+                                <span>Hire Me</span>
                             </a>
-                        </Button>
-                        <Button asChild variant="outline" className="w-full border-primary/20 hover:bg-primary/10 h-12 text-sm uppercase tracking-wider font-medium" size="sm">
+                        </VFXButton>
+                        <VFXButton asChild className="h-14">
                              <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer">
-                                <Instagram className="mr-2 h-4 w-4" />
-                                Instagram
+                                <Instagram className="mr-2 h-5 w-5" />
+                                <span>Instagram</span>
                             </a>
-                        </Button>
+                        </VFXButton>
                     </div>
                 </FadeIn>
                 

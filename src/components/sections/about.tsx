@@ -4,6 +4,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Download } from "lucide-react";
 import { FadeIn } from "../fade-in";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { VFXCard } from "@/components/ui/vfx-card";
 
 export function AboutSection() {
   // const aboutImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-about');
@@ -19,25 +20,22 @@ export function AboutSection() {
           <FadeIn className="space-y-6 md:space-y-8 order-2 md:order-1">
             <div className="text-center md:text-left">
                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">Skills</h3>
-                <Card className="glass-card text-left">
-                    <CardContent className="p-4 md:p-6">
-                        <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-muted-foreground">
-                            <li>Video Editing (Premiere Pro, After Effects)</li>
-                            <li>Color Grading & Color Correction</li>
-                            <li>Green Screen / Chroma Key</li>
-                            <li>Thumbnail Design (Photoshop)</li>
-                            <li>Teaser & Trailer Editing</li>
-                            <li>Reels, Shorts & YouTube Video Editing</li>
-                        </ul>
-                    </CardContent>
-                </Card>
+                <VFXCard className="text-left p-6">
+                    <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-muted-foreground">
+                        <li>Video Editing (Premiere Pro, After Effects)</li>
+                        <li>Color Grading & Color Correction</li>
+                        <li>Green Screen / Chroma Key</li>
+                        <li>Thumbnail Design (Photoshop)</li>
+                        <li>Teaser & Trailer Editing</li>
+                        <li>Reels, Shorts & YouTube Video Editing</li>
+                    </ul>
+                </VFXCard>
             </div>
 
             <div>
                 <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4 text-center md:text-left">Experience</h3>
                 <div className="space-y-4">
-                    <Card className="glass-card">
-                         <CardContent className="p-4 md:p-6 space-y-6">
+                     <VFXCard className="p-6 space-y-6">
                             {/* Freelance Gigs */}
                             <div>
                                 <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center justify-between mb-2">
@@ -67,8 +65,7 @@ export function AboutSection() {
                                     <li>Explainer Videos & Green Screen Editing.</li>
                                 </ul>
                             </div>
-                        </CardContent>
-                    </Card>
+                    </VFXCard>
                 </div>
             </div>
 
@@ -76,7 +73,7 @@ export function AboutSection() {
           </FadeIn>
           
           <FadeIn className="flex justify-center items-center order-1 md:order-2 mb-4 md:mb-0">
-            <Card className="glass-card w-full max-w-[280px] md:max-w-md aspect-[4/7] !p-1 overflow-hidden">
+            <VFXCard className="w-full max-w-[280px] md:max-w-md aspect-[4/7] !p-1 overflow-hidden">
                 <Image
                   src="https://res.cloudinary.com/dz5aiigdm/image/upload/v1770480844/IMG_20260122_173108.jpg_i6nbyr.jpg"
                   alt="Harsh - Video Editor"
@@ -84,7 +81,7 @@ export function AboutSection() {
                   height={1792}
                   className="rounded-lg object-cover w-full h-full"
                 />
-            </Card>
+            </VFXCard>
           </FadeIn>
         </div>
       </div>
