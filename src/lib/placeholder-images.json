@@ -89,24 +89,6 @@
       "description": "Instagram post 6",
       "imageUrl": "https://images.unsplash.com/photo-1750644327996-53b10ca2776d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0cmF2ZWwlMjBwaG90b3xlbnwwfHx8fDE3NzA0NDkxMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "travel photo"
-    },
-    {
-      "id": "testimonial-client-1",
-      "description": "Client 1 photo",
-      "imageUrl": "https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc3MDMzNzQ5NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person smiling"
-    },
-    {
-      "id": "testimonial-client-2",
-      "description": "Client 2 photo",
-      "imageUrl": "https://images.unsplash.com/photo-1610655507808-a59293f4e332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDQwMjYzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
-    },
-    {
-      "id": "testimonial-client-3",
-      "description": "Client 3 photo",
-      "imageUrl": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcwNDQ5MTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man professional"
     }
   ]
 }
