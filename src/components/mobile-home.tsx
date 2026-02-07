@@ -66,12 +66,7 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
 
                 {/* CTAs */}
                 <FadeIn delay={0.5} className="w-full space-y-4 max-w-sm mx-auto">
-                    <Button asChild className="w-full liquid-btn glow-on-hover h-14 text-base uppercase tracking-wide font-semibold group" size="lg">
-                        <a href="https://drive.google.com/drive/mobile/folders/1qrgBlQ5iJMA-bHcxywdl2Tg7G-D0iKDZ?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAPzwcdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeatORSZy-AXtOW8A9yGQ0XMFDi04sgbQ84PxypWOtj4JAm57HjBHqvmvMTMA_aem_xF3Rs-zFzhahNkgsecX4Pg" target="_blank" rel="noopener noreferrer">
-                            <span>View Selected Works</span>
-                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </a>
-                    </Button>
+                    {/* Button Removed as per request */}
                     
                     <div className="grid grid-cols-2 gap-3">
                         <Button asChild variant="outline" className="w-full border-primary/20 hover:bg-primary/10 h-12 text-sm uppercase tracking-wider font-medium" size="sm">
