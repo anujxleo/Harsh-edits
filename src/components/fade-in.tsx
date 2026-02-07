@@ -16,7 +16,8 @@ export function FadeIn({ children, className, as: Component = 'div' }: FadeInPro
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       },
@@ -37,7 +38,7 @@ export function FadeIn({ children, className, as: Component = 'div' }: FadeInPro
   return (
     <Component
       ref={ref}
-      className={cn('opacity-0 translate-y-10 transition-all duration-1000 ease-in-out', className)}
+      className={cn('opacity-0 translate-y-8 scale-95 transition-all duration-700 ease-out', className)}
     >
       {children}
     </Component>

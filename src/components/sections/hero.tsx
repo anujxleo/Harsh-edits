@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { FadeIn } from "../fade-in";
 
 export function HeroSection() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-hero');
@@ -12,7 +13,7 @@ export function HeroSection() {
              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10"></div>
             <div className="container mx-auto px-6 relative z-20">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div className="text-center md:text-left">
+                    <FadeIn as="div" className="text-center md:text-left">
                         <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
                             Harsh
                             <span className="block text-primary">Professional Video Editor</span>
@@ -35,8 +36,8 @@ export function HeroSection() {
                                 </a>
                             </Button>
                         </div>
-                    </div>
-                    <div className="flex justify-center items-center">
+                    </FadeIn>
+                    <FadeIn className="flex justify-center items-center">
                          {heroImage && (
                             <div className="golden-frame transform transition-transform duration-500 hover:scale-105">
                                  <Image
@@ -50,7 +51,7 @@ export function HeroSection() {
                                 />
                             </div>
                         )}
-                    </div>
+                    </FadeIn>
                 </div>
             </div>
         </section>

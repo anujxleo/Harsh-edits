@@ -96,7 +96,12 @@
   }
   .section-title::after {
     content: '';
-    @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-primary rounded-full;
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-primary rounded-full origin-center transition-transform duration-700 ease-out;
+    transform: scaleX(0);
+  }
+
+  .is-visible .section-title::after {
+    transform: scaleX(1);
   }
 
   .liquid-btn {
@@ -124,6 +129,6 @@
     @apply bg-card/50 backdrop-blur-lg border border-primary/20 rounded-xl transition-all duration-300;
   }
   .glass-card:hover {
-    @apply border-primary/50 shadow-2xl shadow-primary/10;
+    @apply border-primary/50 shadow-2xl shadow-primary/10 transform scale-[1.02];
   }
 }
