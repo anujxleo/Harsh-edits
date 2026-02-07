@@ -8,7 +8,18 @@ import { Play } from "lucide-react";
 import { FadeIn } from "../fade-in";
 
 const portfolioItems = {
-  reels: PlaceHolderImages.filter(p => p.id.startsWith('reel-')),
+  thumbnails: [
+    { id: 'thumb-1', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478283/md_sir_copy_jqzp0k.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-2', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478284/sudhanshu_sir_cujlfe.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-3', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478284/tarun_sir_02_gioyek.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-4', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478279/tarun_sir_and_MD_sir._tljsyd.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-5', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478279/md_sir_plqvzi.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-6', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478279/ACP_Sir_nelilc.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-7', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478270/SELECTION_DAIRY_1_tarun_sir_l89itj.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-8', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478269/manthan_2.0_sr1b7t.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-9', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478268/Ho_gyi_copy_sylmgy.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+    { id: 'thumb-10', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478267/Manthan_2.0_Achievers_Books_combo_pgesd0.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
+  ],
   cinematic: PlaceHolderImages.filter(p => p.id.startsWith('cinematic-')),
   transitions: PlaceHolderImages.filter(p => p.id.startsWith('transitions-')),
   music: PlaceHolderImages.filter(p => p.id.startsWith('music-')),
@@ -46,10 +57,10 @@ export function PortfolioSection() {
         </FadeIn>
         
         <FadeIn>
-          <Tabs defaultValue="reels" className="w-full">
+          <Tabs defaultValue="thumbnails" className="w-full">
             <div className="w-full overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0 no-scrollbar">
               <TabsList className="inline-flex h-auto w-auto min-w-full md:w-full md:grid md:grid-cols-5 p-1 gap-2 bg-muted/50 backdrop-blur-sm rounded-xl">
-                <TabsTrigger value="reels" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Instagram Reels</TabsTrigger>
+                <TabsTrigger value="thumbnails" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Thumbnails</TabsTrigger>
                 <TabsTrigger value="cinematic" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Cinematic Edits</TabsTrigger>
                 <TabsTrigger value="transitions" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Transitions</TabsTrigger>
                 <TabsTrigger value="music" className="flex-1 whitespace-nowrap px-4 py-2 text-sm md:text-base">Music Edits</TabsTrigger>
@@ -57,7 +68,7 @@ export function PortfolioSection() {
               </TabsList>
             </div>
             <div className="mt-6 md:mt-8">
-                <TabsContent value="reels"><PortfolioGrid category="reels" /></TabsContent>
+                <TabsContent value="thumbnails"><PortfolioGrid category="thumbnails" /></TabsContent>
                 <TabsContent value="cinematic"><PortfolioGrid category="cinematic" /></TabsContent>
                 <TabsContent value="transitions"><PortfolioGrid category="transitions" /></TabsContent>
                 <TabsContent value="music"><PortfolioGrid category="music" /></TabsContent>
