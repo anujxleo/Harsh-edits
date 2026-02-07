@@ -135,8 +135,8 @@
 
   .golden-frame {
     @apply p-1.5 bg-gradient-to-br from-primary via-accent to-primary rounded-xl shadow-lg;
-    background-size: 200% 200%;
-    animation: gradient-animation 5s ease infinite;
+    background-size: 300% 300%;
+    animation: gradient-animation 4s ease infinite;
   }
 
   .glass-card {
