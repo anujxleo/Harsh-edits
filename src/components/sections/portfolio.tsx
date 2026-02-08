@@ -81,7 +81,12 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-5 sm:px-6">
         <FadeIn>
-          <h2 className="section-title">My Edits</h2>
+          <div className="md:hidden">
+             <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-center mb-12 backdrop-blur-sm">
+                <h2 className="text-3xl font-black uppercase tracking-tighter text-primary drop-shadow-[0_0_10px_rgba(234,179,8,0.3)]">My Edits</h2>
+             </div>
+          </div>
+          <h2 className="section-title hidden md:block">My Edits</h2>
         </FadeIn>
         
         <div className="hidden md:block">
@@ -112,9 +117,9 @@ export function PortfolioSection() {
             {/* Short Edits */}
             <FadeIn>
                 <div className="space-y-6">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Short Edits</h3>
-                        <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-xl font-bold text-primary uppercase tracking-wider">Short Edits</h3>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
                     </div>
                     <PortfolioGrid category="cinematic" />
                 </div>
@@ -123,9 +128,9 @@ export function PortfolioSection() {
             {/* Thumbnails */}
             <FadeIn>
                 <div className="space-y-6">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Thumbnails</h3>
-                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-xl font-bold text-primary uppercase tracking-wider">Thumbnails</h3>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
                     </div>
                     <PortfolioGrid category="thumbnails" />
                 </div>
@@ -134,9 +139,9 @@ export function PortfolioSection() {
             {/* Transitions */}
              <FadeIn>
                 <div className="space-y-6">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Transitions</h3>
-                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-xl font-bold text-primary uppercase tracking-wider">Transitions</h3>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
                     </div>
                     <PortfolioGrid category="transitions" />
                 </div>
@@ -145,9 +150,9 @@ export function PortfolioSection() {
              {/* Music Edits */}
              <FadeIn>
                 <div className="space-y-6">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Music Edits</h3>
-                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-xl font-bold text-primary uppercase tracking-wider">Music Edits</h3>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
                     </div>
                     <PortfolioGrid category="music" />
                 </div>
@@ -156,9 +161,9 @@ export function PortfolioSection() {
              {/* Client Work */}
              <FadeIn>
                 <div className="space-y-6">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold uppercase tracking-wider text-foreground">Client Work</h3>
-                         <div className="h-1 w-24 bg-primary mx-auto mt-2 rounded-full shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-xl font-bold text-primary uppercase tracking-wider">Client Work</h3>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></div>
                     </div>
                     <PortfolioGrid category="client" />
                 </div>

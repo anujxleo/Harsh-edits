@@ -6,7 +6,13 @@ import { FadeIn } from "../fade-in";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { VFXCard } from "@/components/ui/vfx-card";
 
-export function AboutSection() {
+import { MobileSkills } from "@/components/mobile-skills";
+
+interface AboutSectionProps {
+    onHireMeClick?: () => void;
+}
+
+export function AboutSection({ onHireMeClick }: AboutSectionProps) {
   // const aboutImage = PlaceHolderImages.find(p => p.id === 'harsh-professional-about');
 
   return (
@@ -47,6 +53,11 @@ export function AboutSection() {
                     </div>
                 </div>
 
+                {/* Mobile Skills Section - Moved Above Experience */}
+                 <div className="w-full">
+                    <MobileSkills />
+                </div>
+
                 {/* Badges & Buttons Row */}
                 <div className="mt-6 space-y-4">
                     {/* Open to Work Badge */}
@@ -60,8 +71,21 @@ export function AboutSection() {
 
                     {/* Action Buttons */}
                     <div className="grid grid-cols-1 gap-3 w-full">
-                         <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl h-11 font-bold tracking-wide uppercase text-sm" asChild>
-                            <a href="#contact">Hire Me</a>
+                         <Button 
+                            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl h-11 font-bold tracking-wide uppercase text-sm" 
+                            onClick={(e) => {
+                                if (onHireMeClick) {
+                                    e.preventDefault();
+                                    onHireMeClick();
+                                }
+                            }}
+                            asChild={!onHireMeClick}
+                         >
+                            {onHireMeClick ? (
+                                <span>Hire Me</span>
+                            ) : (
+                                <a href="#contact">Hire Me</a>
+                            )}
                          </Button>
                          <div className="grid grid-cols-2 gap-3">
                             <Button variant="outline" className="w-full rounded-xl h-11 border-white/10 bg-white/5 hover:bg-white/10 hover:text-white" asChild>

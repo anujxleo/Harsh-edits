@@ -37,7 +37,12 @@ export function MobileAppInterface({ hero, about, portfolio, services, contact }
           }) : hero}
         </div>;
       case "about":
-        return <div className="pb-24 space-y-8">{about}{services}</div>;
+        return <div className="pb-24 space-y-8">
+          {isValidElement(about) ? cloneElement(about as React.ReactElement<any>, { 
+            onHireMeClick: () => setActiveTab("contact") 
+          }) : about}
+          {services}
+        </div>;
       case "work":
         return <div className="pb-24">{portfolio}</div>;
       case "contact":
