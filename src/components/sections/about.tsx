@@ -27,79 +27,84 @@ export function AboutSection({ onHireMeClick }: AboutSectionProps) {
         {/* Mobile Layout - New Structure */}
         <div className="md:hidden space-y-8">
             <FadeIn>
-                {/* Profile Header - Side by Side */}
-                <div className="flex items-center gap-5">
-                    {/* Profile Image - Circular */}
-                    <div className="relative flex-shrink-0">
-                         <div className="w-[120px] h-[120px] rounded-full p-1 bg-gradient-to-tr from-primary via-primary/50 to-transparent">
-                            <div className="w-full h-full rounded-full overflow-hidden border-2 border-background relative">
-                                <Image
-                                    src="https://res.cloudinary.com/dz5aiigdm/image/upload/v1770480844/IMG_20260122_173108.jpg_i6nbyr.jpg"
-                                    alt="Harsh"
-                                    fill
-                                    className="object-cover object-top"
-                                />
+                <div className="border border-white/10 rounded-2xl p-6 bg-white/5 backdrop-blur-sm relative overflow-hidden">
+                    {/* Background Glow */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+                    {/* Profile Header - Side by Side */}
+                    <div className="flex items-center gap-5 mb-6">
+                        {/* Profile Image - Circular */}
+                        <div className="relative flex-shrink-0">
+                             <div className="w-[100px] h-[100px] rounded-full p-1 bg-gradient-to-tr from-primary via-primary/50 to-transparent">
+                                <div className="w-full h-full rounded-full overflow-hidden border-2 border-background relative">
+                                    <Image
+                                        src="https://res.cloudinary.com/dz5aiigdm/image/upload/v1770480844/IMG_20260122_173108.jpg_i6nbyr.jpg"
+                                        alt="Harsh"
+                                        fill
+                                        className="object-cover object-top"
+                                    />
+                                </div>
                             </div>
+                            {/* Golden Glow Effect behind */}
+                            <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl -z-10"></div>
                         </div>
-                        {/* Golden Glow Effect behind */}
-                        <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl -z-10"></div>
+
+                        {/* Text Content */}
+                        <div className="flex-1 min-w-0 flex flex-col justify-center space-y-1">
+                             <h3 className="text-2xl font-black uppercase text-white tracking-wide leading-none">Harsh</h3>
+                             <p className="text-primary font-bold text-sm uppercase tracking-wider">Video Editor</p>
+                             <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">
+                                Creative editor with 3+ years of experience in visual storytelling.
+                             </p>
+                        </div>
                     </div>
 
-                    {/* Text Content */}
-                    <div className="flex-1 min-w-0 flex flex-col justify-center space-y-1">
-                         <h3 className="text-2xl font-black uppercase text-white tracking-wide leading-none">Harsh</h3>
-                         <p className="text-primary font-bold text-sm uppercase tracking-wider">Video Editor</p>
-                         <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">
-                            Creative editor with 3+ years of experience in visual storytelling and motion graphics.
-                         </p>
-                    </div>
-                </div>
+                    {/* Badges & Buttons Row - Moved Inside Box */}
+                    <div className="space-y-4">
+                        {/* Open to Work Badge */}
+                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 self-start">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                            </span>
+                            <span className="text-[10px] font-bold text-primary uppercase tracking-wider">Open to Work</span>
+                        </div>
 
-                {/* Mobile Skills Section - Moved Above Experience */}
-                 <div className="w-full">
-                    <MobileSkills />
-                </div>
-
-                {/* Badges & Buttons Row */}
-                <div className="mt-6 space-y-4">
-                    {/* Open to Work Badge */}
-                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 self-start">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-wider">Open to Work</span>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="grid grid-cols-1 gap-3 w-full">
-                         <Button 
-                            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl h-11 font-bold tracking-wide uppercase text-sm" 
-                            onClick={(e) => {
-                                if (onHireMeClick) {
-                                    e.preventDefault();
-                                    onHireMeClick();
-                                }
-                            }}
-                            asChild={!onHireMeClick}
-                         >
-                            {onHireMeClick ? (
-                                <span>Hire Me</span>
-                            ) : (
-                                <a href="#contact">Hire Me</a>
-                            )}
-                         </Button>
-                         <div className="grid grid-cols-2 gap-3">
-                            <Button variant="outline" className="w-full rounded-xl h-11 border-white/10 bg-white/5 hover:bg-white/10 hover:text-white" asChild>
-                                <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer">Instagram</a>
-                            </Button>
-                            <Button variant="outline" className="w-full rounded-xl h-11 border-white/10 bg-white/5 hover:bg-white/10 hover:text-white" asChild>
-                                <a href="https://www.linkedin.com/in/harsh-kumar-9348672a6" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            </Button>
-                         </div>
+                        {/* Action Buttons */}
+                        <div className="grid grid-cols-1 gap-3 w-full">
+                             <Button 
+                                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl h-11 font-bold tracking-wide uppercase text-sm" 
+                                onClick={(e) => {
+                                    if (onHireMeClick) {
+                                        e.preventDefault();
+                                        onHireMeClick();
+                                    }
+                                }}
+                                asChild={!onHireMeClick}
+                             >
+                                {onHireMeClick ? (
+                                    <span>Hire Me</span>
+                                ) : (
+                                    <a href="#contact">Hire Me</a>
+                                )}
+                             </Button>
+                             <div className="grid grid-cols-2 gap-3">
+                                <Button variant="outline" className="w-full rounded-xl h-11 border-white/10 bg-white/5 hover:bg-white/10 hover:text-white" asChild>
+                                    <a href="https://www.instagram.com/harshhk_16" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                </Button>
+                                <Button variant="outline" className="w-full rounded-xl h-11 border-white/10 bg-white/5 hover:bg-white/10 hover:text-white" asChild>
+                                    <a href="https://www.linkedin.com/in/harsh-kumar-9348672a6" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                </Button>
+                             </div>
+                        </div>
                     </div>
                 </div>
             </FadeIn>
+
+            {/* Mobile Skills Section - Moved Above Experience */}
+             <div className="w-full">
+                <MobileSkills />
+            </div>
 
              {/* Experience Section (Preserved on Mobile) */}
             <FadeIn>

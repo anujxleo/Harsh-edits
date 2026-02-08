@@ -24,8 +24,7 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
              <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse"></div>
              <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] animate-pulse delay-1000"></div>
 
-             {/* Glowing Curves Animation */}
-             <GlowingCurves />
+
 
             <div className="relative z-10 flex flex-col items-center text-center space-y-6 w-full max-w-md mx-auto">
                 
@@ -118,6 +117,11 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                     </div>
                 </FadeIn>
             </div>
+
+             {/* Glowing Curves Animation - Moved to Bottom */}
+             <div className="absolute bottom-0 left-0 right-0 pointer-events-none translate-y-1/2 opacity-60">
+                <GlowingCurves />
+             </div>
         </section>
     );
 }
