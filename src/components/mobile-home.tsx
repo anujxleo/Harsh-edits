@@ -6,6 +6,7 @@ import { VFXButton } from "@/components/ui/vfx-button";
 import { Instagram, Mail, ArrowRight, Linkedin } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { FadeIn } from "./fade-in";
+import { MobileSkills } from "./mobile-skills";
 
 // Add to props definition at the top of file or component
 interface MobileHomeProps {
@@ -111,6 +112,9 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                     </div>
                 </FadeIn>
             </div>
+
+            {/* Skills Section - Moved from About */}
+             <MobileSkills />
         </section>
     );
 }
