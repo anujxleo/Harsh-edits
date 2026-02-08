@@ -25,7 +25,7 @@ export function MobileSkills() {
                         </div>
 
                         {/* List of Skills */}
-                        <div className="space-y-3">
+                        <div className="space-y-3 text-left">
                             {skills.map((skill, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(255,215,0,0.6)] flex-shrink-0" />
