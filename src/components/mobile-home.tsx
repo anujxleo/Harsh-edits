@@ -66,7 +66,7 @@ export function MobileHome({ onHireMeClick }: MobileHomeProps) {
                         Video Editor
                     </h2>
                     <p className="text-sm text-muted-foreground/90 leading-relaxed max-w-[320px] mx-auto">
-                        Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling.
+                        Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations
                     </p>
                 </FadeIn>
 
