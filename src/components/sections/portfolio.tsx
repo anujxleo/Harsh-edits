@@ -39,7 +39,8 @@ const portfolioItems = {
   };
 
   const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) => {
-    const isVertical = category === 'cinematic' || category === 'promo';
+    const isVertical = category === 'cinematic';
+    const isPromo = category === 'promo';
     const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
     
     /* Container with border only for cinematic ("Short Edits") and promo ("PROMO") */
@@ -50,7 +51,9 @@ const portfolioItems = {
             "grid gap-4 md:gap-8", 
             isVertical 
               ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" 
-              : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" 
+              : isPromo
+                ? "grid-cols-1 md:grid-cols-2" // Single column on mobile for Promo
+                : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" 
           )}>
             {portfolioItems[category].map((item) => {
               const isVideo = item.imageUrl.endsWith('.mp4');
