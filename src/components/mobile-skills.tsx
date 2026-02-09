@@ -14,7 +14,7 @@ export function MobileSkills() {
     ];
 
     return (
-        <section className="mt-8 px-5 w-full z-10 relative">
+        <section className="mt-8 w-full z-10 relative">
             <FadeIn>
                 <VFXCard className="p-0 overflow-hidden">
                     <div className="relative p-6 bg-black/40 backdrop-blur-md border border-white/10 rounded-xl">

@@ -20,8 +20,6 @@ const portfolioItems = {
     { id: 'thumb-6', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478279/ACP_Sir_nelilc.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
     { id: 'thumb-7', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478270/SELECTION_DAIRY_1_tarun_sir_l89itj.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
     { id: 'thumb-8', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478269/manthan_2.0_sr1b7t.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
-    { id: 'thumb-9', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478268/Ho_gyi_copy_sylmgy.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
-    { id: 'thumb-10', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478267/Manthan_2.0_Achievers_Books_combo_pgesd0.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
   ],
       cinematic: [
       { id: 'short-1', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619873/mee_1_c4zbqt.mp4', description: 'Short Edit 1', imageHint: 'Short Edit' },
