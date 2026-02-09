@@ -22,7 +22,12 @@ const portfolioItems = {
     { id: 'thumb-9', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478268/Ho_gyi_copy_sylmgy.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
     { id: 'thumb-10', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/image/upload/v1770478267/Manthan_2.0_Achievers_Books_combo_pgesd0.jpg', description: 'Thumbnail Design', imageHint: 'Thumbnail Design' },
   ],
-  cinematic: PlaceHolderImages.filter(p => p.id.startsWith('cinematic-')),
+      cinematic: [
+      { id: 'short-1', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619873/mee_1_c4zbqt.mp4', description: 'Short Edit 1', imageHint: 'Short Edit' },
+      { id: 'short-2', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619642/mee_c4iaff.mp4', description: 'Short Edit 2', imageHint: 'Short Edit' },
+      { id: 'short-3', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619587/01_ilk3ey.mp4', description: 'Short Edit 3', imageHint: 'Short Edit' },
+      { id: 'short-4', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619494/mee_2_e3dqms.mp4', description: 'Short Edit 4', imageHint: 'Short Edit' },
+    ],
   transitions: PlaceHolderImages.filter(p => p.id.startsWith('transitions-')),
   music: PlaceHolderImages.filter(p => p.id.startsWith('music-')),
   client: PlaceHolderImages.filter(p => p.id.startsWith('client-')),
@@ -31,12 +36,60 @@ const portfolioItems = {
 const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) => {
   const isVertical = category === 'cinematic';
   
+  /* Container with border only for cinematic ("Short Edits") */
+  if (category === 'cinematic') {
+    return (
+      <div className="border border-primary/20 rounded-xl p-2 md:p-4 bg-background/5">
+        <div className={cn(
+          "grid gap-4 md:gap-8", 
+          isVertical 
+            ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" 
+            : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" 
+        )}>
+          {portfolioItems[category].map((item) => {
+            const isVideo = item.imageUrl.endsWith('.mp4');
+            return (
+              <div key={item.id} className={cn(
+                "group relative overflow-hidden rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/20",
+                isVertical ? "aspect-[9/16]" : "aspect-video"
+              )}>
+                {isVideo ? (
+                   <VideoPlayer 
+                      src={item.imageUrl} 
+                      aspectRatio={isVertical ? "vertical" : "video"}
+                      autoPlay={false} 
+                   />
+                ) : (
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.description}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    data-ai-hint={item.imageHint}
+                  />
+                )}
+                
+                {!isVideo && (
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center gap-4">
+                        <span className="text-white font-bold text-base md:text-lg border-2 border-primary px-4 py-1 rounded-full bg-black/50 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        View Project
+                        </span>
+                    </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={cn(
-      "grid gap-4 md:gap-8", // Reduced gap on mobile
+      "grid gap-4 md:gap-8", 
       isVertical 
         ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" 
-        : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" // Changed mobile to grid-cols-2 for all
+        : "grid-cols-2 md:grid-cols-2 lg:grid-cols-3" 
     )}>
       {portfolioItems[category].map((item) => {
         const isVideo = item.imageUrl.endsWith('.mp4');
@@ -49,7 +102,7 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
                <VideoPlayer 
                   src={item.imageUrl} 
                   aspectRatio={isVertical ? "vertical" : "video"}
-                  autoPlay={false} // Disable autoplay to let user control it
+                  autoPlay={false} 
                />
             ) : (
               <Image
@@ -61,7 +114,6 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
               />
             )}
             
-            {/* Overlay for non-video items or additional info */}
             {!isVideo && (
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center gap-4">
                     <span className="text-white font-bold text-base md:text-lg border-2 border-primary px-4 py-1 rounded-full bg-black/50 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
