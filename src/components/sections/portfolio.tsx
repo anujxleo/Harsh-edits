@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -35,6 +36,7 @@ const portfolioItems = {
 
 const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) => {
   const isVertical = category === 'cinematic';
+  const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
   
   /* Container with border only for cinematic ("Short Edits") */
   if (category === 'cinematic') {
@@ -58,6 +60,13 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
                       src={item.imageUrl} 
                       aspectRatio={isVertical ? "vertical" : "video"}
                       autoPlay={false} 
+                      isPlaying={currentPlayingId === item.id}
+                      onPlay={() => setCurrentPlayingId(item.id)}
+                      onPause={() => {
+                        if (currentPlayingId === item.id) {
+                            setCurrentPlayingId(null);
+                        }
+                      }}
                    />
                 ) : (
                   <Image
@@ -103,6 +112,13 @@ const PortfolioGrid = ({ category }: { category: keyof typeof portfolioItems }) 
                   src={item.imageUrl} 
                   aspectRatio={isVertical ? "vertical" : "video"}
                   autoPlay={false} 
+                  isPlaying={currentPlayingId === item.id}
+                  onPlay={() => setCurrentPlayingId(item.id)}
+                  onPause={() => {
+                    if (currentPlayingId === item.id) {
+                        setCurrentPlayingId(null);
+                    }
+                  }}
                />
             ) : (
               <Image

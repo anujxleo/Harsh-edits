@@ -9,34 +9,57 @@ interface VideoPlayerProps {
   className?: string;
   aspectRatio?: "video" | "vertical"; // 'video' = 16:9, 'vertical' = 9:16
   autoPlay?: boolean;
+  isPlaying?: boolean; // Controlled state
+  onPlay?: () => void; // Callback when play is requested
+  onPause?: () => void; // Callback when pause is requested
 }
 
-export function VideoPlayer({ src, className, aspectRatio = "video", autoPlay = false }: VideoPlayerProps) {
+export function VideoPlayer({ 
+    src, 
+    className, 
+    aspectRatio = "video", 
+    autoPlay = false,
+    isPlaying: controlledIsPlaying, 
+    onPlay,
+    onPause
+}: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [internalIsPlaying, setInternalIsPlaying] = useState(autoPlay);
   const [isMuted, setIsMuted] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
+  // Determine if component is controlled or uncontrolled
+  const isControlled = controlledIsPlaying !== undefined;
+  const isPlaying = isControlled ? controlledIsPlaying : internalIsPlaying;
+
   useEffect(() => {
     if (videoRef.current) {
-        if (autoPlay) {
+        if (isPlaying) {
             videoRef.current.play().catch(error => {
-                console.log("Autoplay prevented:", error);
-                setIsPlaying(false);
+                console.log("Play prevented:", error);
+                if (!isControlled) setInternalIsPlaying(false);
+                if (onPause) onPause();
             });
+        } else {
+            videoRef.current.pause();
         }
     }
-  }, [autoPlay]);
+  }, [isPlaying, isControlled, onPause]);
 
-  const togglePlay = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent event bubbling if necessary
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+  const handlePlayClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    if (isPlaying) {
+        if (onPause) onPause();
+        if (!isControlled) setInternalIsPlaying(false);
+    } else {
+        if (onPlay) onPlay();
+        if (!isControlled) setInternalIsPlaying(true);
+        // Auto-unmute on play
+        setIsMuted(false);
+        if (videoRef.current) {
+            videoRef.current.muted = false;
+        }
     }
   };
 
@@ -57,7 +80,7 @@ export function VideoPlayer({ src, className, aspectRatio = "video", autoPlay = 
         )}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={togglePlay}
+        onClick={handlePlayClick}
     >
       <video
         ref={videoRef}
@@ -68,11 +91,12 @@ export function VideoPlayer({ src, className, aspectRatio = "video", autoPlay = 
         playsInline
       />
 
-      {/* Overlay: Visible on pause or hover */}
+      {/* Overlay: Visible on pause */}
+      {/* Hide immediately when playing, regardless of hover */}
       <div 
         className={cn(
             "absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity duration-300",
-            isPlaying && !isHovered ? "opacity-0" : "opacity-100"
+            isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
         )}
       >
          <button 
@@ -98,12 +122,8 @@ export function VideoPlayer({ src, className, aspectRatio = "video", autoPlay = 
         {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
       </button>
 
-      {/* Status Badge */}
-      <div className="absolute top-4 left-4 z-10">
-          <span className="px-2 py-1 text-xs font-medium text-white bg-black/50 backdrop-blur-md rounded-md border border-white/10">
-              {aspectRatio === 'vertical' ? 'Short' : 'Video'}
-          </span>
-      </div>
+      {/* Status Badge REMOVED as per request */}
     </div>
   );
 }
+
