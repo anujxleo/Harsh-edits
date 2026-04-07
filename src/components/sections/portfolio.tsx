@@ -26,6 +26,8 @@ const portfolioItems = {
       { id: 'short-2', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619642/mee_c4iaff.mp4', description: 'Short Edit 2', imageHint: 'Short Edit' },
       { id: 'short-3', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619587/01_ilk3ey.mp4', description: 'Short Edit 3', imageHint: 'Short Edit' },
       { id: 'short-4', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770619494/mee_2_e3dqms.mp4', description: 'Short Edit 4', imageHint: 'Short Edit' },
+      { id: 'short-5', imageUrl: 'https://res.cloudinary.com/dy40kl4z7/video/upload/v1775558230/shorts_Yt_hfsvps.mp4', description: 'Short Edit 5', imageHint: 'Short Edit' },
+      { id: 'short-6', imageUrl: 'https://res.cloudinary.com/dy40kl4z7/video/upload/v1775558079/shorts_2nd_insta_qn2wrd.mp4', description: 'Short Edit 6', imageHint: 'Short Edit' },
     ],
     promo: [
       { id: 'promo-1', imageUrl: 'https://res.cloudinary.com/dz5aiigdm/video/upload/v1770620360/Sequence_03_1_sgttdh.mp4', description: 'Promo Edit 1', imageHint: 'Promo Edit' },
